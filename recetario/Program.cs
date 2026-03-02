@@ -1,177 +1,204 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-public class Usuarios //1
+// 1. Usuarios
+public class Usuarios
 {
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string universidad {get; set;}
-    public string numero {get; set;}
-    public string correo {get; set;}
-    public DateTime fecha_nacimiento {get; set;}
-
-    
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public int IdUniversidad { get; set; }
+    public string Numero { get; set; }
+    public string Correo { get; set; }
+    public DateTime FechaNacimiento { get; set; }
+    public bool Activo { get; set; }
 }
 
-public class  Universidad //2
+// 2. Universidad
+public class Universidad
 {
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string ciudad {get; set;}
-    public string pais {get; set;}
-    public DateTime fecha_registro {get; set;}
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Ciudad { get; set; }
+    public string Pais { get; set; }
+    public DateTime FechaRegistro { get; set; }
 }
 
-public class  Recetario //3
+// 3. Recetario
+public class Recetario
 {
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string Descripcion {get; set;}
-    public int Id_usuario {get; set;}
-    public DateTime fecha_creacion {get; set;}
-    public bool publica { get; set; }
-} 
-
-public class  Moderador  //4
-{
-    public int Id {get; set;}
-    public int Id_usuario {get; set;}
-    public string NivelPermiso {get; set;}
-    public bool fechaAsignacion {get; set;}
-    public bool activo {get; set;}
-}
-public class Recetas  //5
-{
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string Descripcion {get; set;}
-    public string Ingredientes {get; set;}
-    public string Utencilios {get; set;}
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Descripcion { get; set; }
+    public int IdUsuario { get; set; }
+    public DateTime FechaCreacion { get; set; }
+    public bool EsPublico { get; set; }
 }
 
-public class Categorias  //6
+// 4. Moderador 
+public class Moderador
 {
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string Descripcion {get; set;}
-    public string Tipo {get; set;}
-    public bool activa {get; set;}
-}
-public class Ingredientes //7
-{
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string calorias {get; set;}
-    public string precio_promedio {get; set;}
-    public string cantidad {get; set;}
+    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public string AreaAsignacion { get; set; }
 }
 
-public class Favoritos    //8
+// 5. Recetas
+public class Recetas
 {
-    public int Id {get; set;}
-    public int Id_usuario{get; set;}
-    public int Id_receta {get; set;}
-    public string nombre { get; set;}
-    public DateTime fechaAgregado {get; set;}
-    
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Descripcion { get; set; }
+    public string Foto { get; set; }
+    public int IdCategoria { get; set; }
+    public int IdUsuario { get; set; }
+    public DateTime FechaCreacion { get; set; }
 }
 
-public class  Preparacion  //9
+// 6. Categorias
+public class Categorias
 {
-    public int Id {get; set;}
-    public int Id_receta {get; set;}
-    public string pasoNumero {get; set;}
-    public string descripcion {get; set;}
-    public string tiempo {get; set;}
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Descripcion { get; set; }
+    public string Tipo { get; set; }
+    public bool Activa { get; set; }
 }
 
-public class  Reseñas    //10
+// 7. Ingredientes
+public class Ingredientes
 {
-    public int Id {get; set;}
-    public int Id_usuario{get; set;}
-    public int Id_receta{get; set;}
-    public string comentario {get; set;}
-    public decimal puntiacion {get; set;}
-    public DateTime fechaComentario {get; set;}
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Estado { get; set; }
+    public decimal PrecioPromedio { get; set; }
+    public decimal Cantidad { get; set; }
 }
 
-public class  Tabla_novedades  //11
+// 8. Favoritos
+public class Favoritos
 {
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string Descripcion {get; set;}
-    public string Ingredientes {get; set;}
-    public string Utencilios {get; set;}
+    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public int IdReceta { get; set; }
+    public DateTime FechaAgregado { get; set; }
+    public bool Activo { get; set; }
 }
 
-public class  Utencilios    //12
+// 9. Preparacion
+public class Preparacion
 {
-    public int Id {get; set;}
-    public string nombre {get; set;}
-    public string Descripcion {get; set;}
+    public int Id { get; set; }
+    public int IdReceta { get; set; }
+    public int NumeroPaso { get; set; }
+    public string Descripcion { get; set; }
+    public int TiempoEstimado { get; set; }
 }
 
-public class Tips   //13
+// 10. Reseñas
+public class Reseñas
 {
-    public int Id {get; set;}
-    public int Id_usuario {get; set;}
-    public int Id_receta {get; set;}
-    public string titulo {get; set;}
-    public string Descripcion {get; set;}
-    
-    
+    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public int IdReceta { get; set; }
+    public string Comentario { get; set; }
+    public decimal Nota { get; set; }
+    public DateTime FechaComentario { get; set; }
 }
 
-public class  Diccionario   //14
+// 11. TablaNovedades
+public class TablaNovedades
 {
-    public int Id {get; set;}
-    public int Id_usuario {get; set;}
-    public string palabra {get; set;}
-    public string definicion {get; set;}
-    
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Descripcion { get; set; }
+    public DateTime FechaNovedad { get; set; }
+    public int IdReceta { get; set; }
+    public bool Activa { get; set; }
 }
 
-public class  Historial  //15
+// 12. Utensilios
+public class Utensilios
 {
-    public int Id {get; set;}
-    public int Id_usuario {get; set;}
-    public int Id_receta {get; set;}
-    public DateTime fechaVisualizacion {get; set;}
-  
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public string Material { get; set; }
+    public string Tamano { get; set; }
+    public bool Disponible { get; set; }
 }
 
-public class  Plan_semanal //16
+// 13. Tips
+public class Tips
 {
-    public int Id {get; set;}
-    public int Id_usuario{get; set;}
-    public int Id_receta {get; set;}
-    public DateTime fechaInicio{get; set;}
-    public DateTime fechaFin{get; set;}
-    public string presupuesto {get; set;}
-
+    public int Id { get; set; }
+    public string Mejora { get; set; }
+    public string Recomendacion { get; set; }
+    public int IdReceta { get; set; }
+    public DateTime Fecha { get; set; }
 }
 
-public class  Soporte  //17
+// 14. Diccionario 
+public class Diccionario
 {
-    public int Id {get; set;}
-    public int Id_usuario {get; set;}
-    public string asunto {get; set;}
-    public string descripcion {get; set;}
-    public DateTime fechaCreacion  {get; set;}
-    public bool estado {get; set;}
+    public int Id { get; set; }
+    public string Palabra { get; set; }
+    public string Significado { get; set; }
 }
 
-public class  Seguimiento //18
+// 15. Historial
+public class Historial
 {
-
+    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public int IdReceta { get; set; }
+    public DateTime FechaVisualizacion { get; set; }
+    public int TiempoVisualizacion { get; set; }
 }
 
-public class  Notificaciones //19
+// 16. PlanSemanal
+public class PlanSemanal
 {
-
+    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public DateTime FechaInicio { get; set; }
+    public DateTime FechaFin { get; set; }
+    public decimal Presupuesto { get; set; }
 }
 
-public class  Preguntas //20
+// 17. Soporte
+public class Soporte
 {
+    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public string Asunto { get; set; }
+    public string Descripcion { get; set; }
+    public DateTime FechaCreacion { get; set; }
+    public string Estado { get; set; }
+}
 
+// 18. Seguimiento
+public class Seguimiento
+{
+    public int Id { get; set; }
+    public int IdSoporte { get; set; }
+    public string Comentario { get; set; }
+    public DateTime Fecha { get; set; }
+    public string Estado { get; set; }
+}
+
+// 19. Notificaciones
+public class Notificaciones
+{
+    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public string Mensaje { get; set; }
+    public DateTime Fecha { get; set; }
+    public bool Leida { get; set; }
+}
+
+// 20. Preguntas 
+public class Preguntas
+{
+    public int Id { get; set; }
+    public string Pregunta { get; set; }
+    public string Respuesta { get; set; }
 }
