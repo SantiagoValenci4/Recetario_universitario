@@ -176,6 +176,9 @@ public class Utensilios
     public string Material { get; set; }
     public string Tamano { get; set; }
     public bool Disponible { get; set; }
+    public int IdReceta { get; set; }
+    
+    public Recetas? _Receta { get; set; }
 }
 
 // 13
