@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-// 1. Usuarios
+// 1
 public class Usuarios
 {
     public int Id { get; set; }
@@ -13,7 +13,7 @@ public class Usuarios
     public bool Activo { get; set; }
 }
 
-// 2. Universidad
+// 2
 public class Universidad
 {
     public int Id { get; set; }
@@ -23,18 +23,7 @@ public class Universidad
     public DateTime FechaRegistro { get; set; }
 }
 
-// 3. Recetario
-public class Recetario
-{
-    public int Id { get; set; }
-    public string Nombre { get; set; }
-    public string Descripcion { get; set; }
-    public int IdUsuario { get; set; }
-    public DateTime FechaCreacion { get; set; }
-    public bool EsPublico { get; set; }
-}
-
-// 4. Moderador 
+// 3
 public class Moderador
 {
     public int Id { get; set; }
@@ -42,7 +31,7 @@ public class Moderador
     public string AreaAsignacion { get; set; }
 }
 
-// 5. Recetas
+// 4
 public class Recetas
 {
     public int Id { get; set; }
@@ -54,7 +43,7 @@ public class Recetas
     public DateTime FechaCreacion { get; set; }
 }
 
-// 6. Categorias
+// 5
 public class Categorias
 {
     public int Id { get; set; }
@@ -64,17 +53,28 @@ public class Categorias
     public bool Activa { get; set; }
 }
 
-// 7. Ingredientes
+// 6
 public class Ingredientes
 {
     public int Id { get; set; }
     public string Nombre { get; set; }
     public string Estado { get; set; }
     public decimal PrecioPromedio { get; set; }
-    public decimal Cantidad { get; set; }
+    public bool Activo { get; set; }
 }
 
-// 8. Favoritos
+// 7
+public class RecetaIngrediente
+{
+    public int Id { get; set; }
+    public int IdReceta { get; set; }
+    public int IdIngrediente { get; set; }
+    public decimal Cantidad { get; set; }
+    public string Unidad { get; set; }
+    public bool Opcional { get; set; }
+}
+
+// 8
 public class Favoritos
 {
     public int Id { get; set; }
@@ -84,7 +84,7 @@ public class Favoritos
     public bool Activo { get; set; }
 }
 
-// 9. Preparacion
+// 9
 public class Preparacion
 {
     public int Id { get; set; }
@@ -94,7 +94,7 @@ public class Preparacion
     public int TiempoEstimado { get; set; }
 }
 
-// 10. Reseñas
+// 10
 public class Reseñas
 {
     public int Id { get; set; }
@@ -105,7 +105,7 @@ public class Reseñas
     public DateTime FechaComentario { get; set; }
 }
 
-// 11. TablaNovedades
+// 11
 public class TablaNovedades
 {
     public int Id { get; set; }
@@ -116,7 +116,7 @@ public class TablaNovedades
     public bool Activa { get; set; }
 }
 
-// 12. Utensilios
+// 12
 public class Utensilios
 {
     public int Id { get; set; }
@@ -126,7 +126,7 @@ public class Utensilios
     public bool Disponible { get; set; }
 }
 
-// 13. Tips
+// 13
 public class Tips
 {
     public int Id { get; set; }
@@ -136,7 +136,7 @@ public class Tips
     public DateTime Fecha { get; set; }
 }
 
-// 14. Diccionario 
+// 14
 public class Diccionario
 {
     public int Id { get; set; }
@@ -144,7 +144,7 @@ public class Diccionario
     public string Significado { get; set; }
 }
 
-// 15. Historial
+// 15
 public class Historial
 {
     public int Id { get; set; }
@@ -154,7 +154,7 @@ public class Historial
     public int TiempoVisualizacion { get; set; }
 }
 
-// 16. PlanSemanal
+// 16
 public class PlanSemanal
 {
     public int Id { get; set; }
@@ -164,7 +164,7 @@ public class PlanSemanal
     public decimal Presupuesto { get; set; }
 }
 
-// 17. Soporte
+// 17
 public class Soporte
 {
     public int Id { get; set; }
@@ -175,7 +175,7 @@ public class Soporte
     public string Estado { get; set; }
 }
 
-// 18. Seguimiento
+// 18
 public class Seguimiento
 {
     public int Id { get; set; }
@@ -185,7 +185,7 @@ public class Seguimiento
     public string Estado { get; set; }
 }
 
-// 19. Notificaciones
+// 19
 public class Notificaciones
 {
     public int Id { get; set; }
@@ -195,7 +195,7 @@ public class Notificaciones
     public bool Leida { get; set; }
 }
 
-// 20. Preguntas 
+// 20
 public class Preguntas
 {
     public int Id { get; set; }
