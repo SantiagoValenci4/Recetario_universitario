@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+Console.WriteLine("¡¡¡RECETARIO PARA UNIVERSITARIOS!!!");
 
 var universidades = new List<Universidad>();
 
@@ -16,6 +16,7 @@ usuarios.Add(new Usuarios() { Id = 2, Nombre = "Ana", IdUniversidad = 2, Numero 
 usuarios.Add(new Usuarios() { Id = 3, Nombre = "Luis", IdUniversidad = 3, Numero = "3003333333", Correo = "luis@gmail.com", FechaNacimiento = new DateTime(2001, 3, 20), Activo = true });
 usuarios.Add(new Usuarios() { Id = 4, Nombre = "Sofia", IdUniversidad = 4, Numero = "3004444444", Correo = "sofia@gmail.com", FechaNacimiento = new DateTime(1998, 7, 15), Activo = true });
 usuarios.Add(new Usuarios() { Id = 5, Nombre = "Carlos", IdUniversidad = 1, Numero = "3005555555", Correo = "carlos@gmail.com", FechaNacimiento = new DateTime(2002, 11, 2), Activo = false });
+
 
 var recetas = new List<Recetas>();
 
@@ -177,8 +178,86 @@ moderadores.Add(new Moderador() { Id = 3, IdUsuario = 3, AreaAsignacion = "Usuar
 moderadores.Add(new Moderador() { Id = 4, IdUsuario = 4, AreaAsignacion = "Soporte" });
 moderadores.Add(new Moderador() { Id = 5, IdUsuario = 5, AreaAsignacion = "General" });
 
+Console.WriteLine("---");
+Console.WriteLine("Usuarios activos");
 
+foreach (var usuario in usuarios.Where(x => x.Activo))
+{
+    Console.WriteLine(usuario.Id + "|" +
+        usuario.Nombre + "|" +
+        usuario.Correo + "|" +
+        usuario.Numero + "|" +
+        usuario.Activo);
+}
+Console.WriteLine("---");
+Console.WriteLine("Recetas de categoria Postres");
 
+var recetasPostres = from r in recetas
+                     join c in categorias
+                     on r.IdCategoria equals c.Id
+                     where c.Nombre == "Postres"
+                     select new
+                     {
+                         r.Nombre,
+                         Categoria = c.Nombre
+                     };
+
+foreach (var r in recetasPostres)
+{
+    Console.WriteLine(r.Nombre + "|" + r.Categoria);
+}
+
+Console.WriteLine("---");
+Console.WriteLine("Recetas favoritas activas");
+
+var favoritasActivas = from f in favoritos
+                       join u in usuarios on f.IdUsuario equals u.Id
+                       join r in recetas on f.IdReceta equals r.Id
+                       where f.Activo == true
+                       select new
+                       {
+                           Usuario = u.Nombre,
+                           Receta = r.Nombre
+                       };
+
+foreach (var f in favoritasActivas)
+{
+    Console.WriteLine(f.Usuario + "|" + f.Receta);
+}
+
+Console.WriteLine("---");
+Console.WriteLine("Ingredientes de la receta Arroz con huevo");
+
+var ingredientesReceta = from ri in recetaIngredientes
+                         join i in ingredientes on ri.IdIngrediente equals i.Id
+                         join r in recetas on ri.IdReceta equals r.Id
+                         where r.Nombre == "Arroz con huevo"
+                         select new
+                         {
+                             Receta = r.Nombre,
+                             Ingrediente = i.Nombre,
+                             ri.Cantidad,
+                             ri.Unidad
+                         };
+
+foreach (var item in ingredientesReceta)
+{
+    Console.WriteLine(item.Receta + "|" +
+        item.Ingrediente + "|" +
+        item.Cantidad + "|" +
+        item.Unidad);
+}
+
+Console.WriteLine("---");
+Console.WriteLine("Tickets de soporte abiertos");
+
+foreach (var soporte in soportes.Where(x => x.Estado == "Abierto"))
+{
+    Console.WriteLine(soporte.Id + "|" +
+        soporte.Asunto + "|" +
+        soporte.Descripcion + "|" +
+        soporte.Estado);
+}
 
 // 1
 public class Usuarios

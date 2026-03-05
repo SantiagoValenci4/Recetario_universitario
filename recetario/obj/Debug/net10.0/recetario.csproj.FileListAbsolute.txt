@@ -1,0 +1,15 @@
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.AssemblyInfoInputs.cache
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.AssemblyInfo.cs
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.csproj.CoreCompileInputs.cache
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.sourcelink.json
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\bin\Debug\net10.0\recetario.exe
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\bin\Debug\net10.0\recetario.deps.json
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\bin\Debug\net10.0\recetario.runtimeconfig.json
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\bin\Debug\net10.0\recetario.dll
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\bin\Debug\net10.0\recetario.pdb
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.dll
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\refint\recetario.dll
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.pdb
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\recetario.genruntimeconfig.cache
+C:\Users\WINDOWS10\Documents\proyecto_recetario\Recetario_universitario\recetario\obj\Debug\net10.0\ref\recetario.dll
